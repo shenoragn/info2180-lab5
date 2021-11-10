@@ -2,6 +2,7 @@
 <html>
 	<head>
         <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>World Database Lookup</title>
 
 		<!-- you can modify this as needed or to your preference -->
@@ -16,17 +17,26 @@
 			<h1>World Database Lookup</h1>
 		</header>
 
-		<main>
+		<main class="main">
 			<div id="controls">
-				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<form name="form" action"#" method="GET">
+					<label for="country">Country:</label>
+					<input id="country" type="search" name="country" placeholder="Enter country name" />
+					<button id="cntry">Lookup Country</button>
+					<button id="city">Lookup Cities</button>
+				</form>
 			</div>
 			
 			<div id="result">
 				<!-- countries will appear here -->
 			</div>
 		</main>
+		
+		<footer class="foot">
+			<div class="footer">
+				<p>Copyright 2021, Shenor Anglin</p>
+			</div>
+		</footer>
 
 	</body>
 </html>

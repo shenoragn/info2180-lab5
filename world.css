@@ -1,1 +1,80 @@
 /* Add your own styles */
+body {
+    margin: 0;
+    font-size: 18px;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+	background-color: white;
+}
+
+.container{
+	display: grid;
+	grid-template-areas:
+    'head head head head head head'
+    'main main main main main main'
+    'foot foot foot foot foot foot';
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+.head{
+	grid-area: head;
+	color: #C0C0C0;
+	background-color: #000000;
+	text-align: center;
+}
+
+.main{
+	grid-area: main;
+}
+
+.foot{
+	grid-area: foot;
+	position: fixed;
+	bottom: 0;
+	height: 60px;
+	color: #C0C0C0;
+	background-color: #000000;
+	text-align: center;
+}
+
+.foot{
+	width: 100%;
+}
+
+#cntry{
+	background-color: green;
+	border-radius: 5px;
+	margin-left: 200px;
+}
+
+#city{
+	background-color: blue;
+	border-radius: 5px;
+}
+
+#country{
+	display: inline;
+	justify-content: center;
+	align: center;
+	width: 80%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#result {
+	border-top: 1px solid gray; 
+}

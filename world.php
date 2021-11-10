@@ -1,20 +1,20 @@
 <?php
-$host = 'localhost';
-$username = 'lab5_user';
-$password = 'password123';
-$dbname = 'world';
-$country = htmlspecialchars($_GET["country"]);
+	$host = 'localhost';
+	$username = 'lab5_user';
+	$password = 'password123';
+	$dbname = 'world';
+	$country = htmlspecialchars($_GET["country"]);
 	$cityLookup = htmlspecialchars($_GET["city"]);
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", lab5_user, password123);
-if ($cityLookup == "") {
+	$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+	if ($cityLookup == "") {
 		$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 	}
 	elseif ($cityLookup == "cities") {
 		$stmt = $conn->query("SELECT cities.name, cities.district, cities.population FROM cities JOIN countries ON cities.country_code=countries.code WHERE countries.name LIKE '%$country%'");
 	}
 
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
